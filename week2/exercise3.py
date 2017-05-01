@@ -9,7 +9,7 @@ def is_odd(a_number):
 
     Look into modulo division using the '%' operator as one way of doing this.
     """
-    pass
+    return a_number % 2 != 0
 
 
 def fix_it(moves=True, should_move=True):
@@ -23,7 +23,14 @@ def fix_it(moves=True, should_move=True):
     "Duct Tape"
     "No Problem"
     """
-    pass
+    if moves == should_move:
+        return "No Problem"
+    elif moves and not should_move:
+        return "Duct Tape"
+    elif not moves and should_move:
+        return "WD-40"
+    else:
+        return "Something is not right here"
 
 
 def loops_1a():
@@ -33,7 +40,11 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    pass
+    star_list = []
+    for i in range(10):
+        star_list.append("*")
+    print (star_list)
+    return star_list
 
 
 def star_map():
@@ -44,8 +55,12 @@ def star_map():
     if it's even. Reuse the is odd function that you've already written.
     E.g.: ["!", "*", "!", "*", "!", "*", "!", "*", "!", "*"]
     """
-    pass
-
+    def star_bang(x):
+        if is_odd(x):
+            return "*"
+        else:
+            return "!"
+    return map(star_bang, range(10))
 
 def loops_1c(number_of_items=5, symbol="#"):
     """Respond to variables.
@@ -55,7 +70,10 @@ def loops_1c(number_of_items=5, symbol="#"):
     a string with exacly one symbol in it.
     E.g.: ['#', '#', '#', '#', '#']
     """
-    pass
+    my_list = []
+    for i in range(number_of_items):
+        my_list.append(symbol)
+    return my_list
 
 
 def loops_2():
@@ -76,7 +94,10 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    pass
+    star_square = []
+    for j in range(10):
+        star_square.append(loops_1c(number_of_items=10, symbol="*"))
+    return star_square
 
 
 def loops_3():
@@ -100,7 +121,20 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    pass
+    number_block = []
+    for i in range(10):
+        number_row = []
+        for j in range(10):
+            number_row.append(str(i))
+        number_block.append(number_row)
+
+    print(number_block)
+    return number_block
+
+
+
+
+
 
 
 def loops_4():
@@ -118,7 +152,11 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    pass
+    number_block = []
+    for i in range(10):
+        number_block.append(range(10))
+        
+    return number_block
 
 
 def loops_5():
@@ -143,7 +181,7 @@ def loops_5():
         "There are {} green bottles".format(8)
     you'll come to see the pros and cons of each over time.
     """
-    pass
+
 
 
 def loops_6():
