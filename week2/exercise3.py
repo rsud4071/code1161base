@@ -153,7 +153,10 @@ def loops_4():
     """
     number_block = []
     for i in range(10):
-        number_block.append(range(10))
+        row = []
+        for j in range(10):
+            row.append(str(j))
+        number_block.append(row)
 
     return number_block
 
@@ -184,7 +187,7 @@ def loops_5():
     for i in range(10):
         coordinates_row = []
         for j in range(5):
-            coordinates_row.append("(i" + str(i) + "," + "j" + str(j) + ")")
+            coordinates_row.append("(i" + str(i) + ", " + "j" + str(j) + ")")
         number_square.append(coordinates_row)
 
     return number_square
@@ -210,7 +213,14 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    pass
+    number_wedge = []
+    for i in range(10):
+        row = []
+        for j in range(i + 1):
+            row.append(str(j))
+
+        number_wedge.append(row)
+    return number_wedge
 
 
 def loops_7():
@@ -234,8 +244,17 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    pass
+    star_pyramid = []
+    for i in range(5):
+        row = []
+        for j in range(9):
+            if abs(j-4) <= i:
+                row.append('*')
+            else:
+                row.append(' ')
+        star_pyramid.append(row)
 
+    return star_pyramid
 
 def lp(some_kind_of_list, exercise_name):
     """Help to see what's going on.
