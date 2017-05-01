@@ -128,7 +128,6 @@ def loops_3():
             number_row.append(str(i))
         number_block.append(number_row)
 
-    print(number_block)
     return number_block
 
 
@@ -155,7 +154,7 @@ def loops_4():
     number_block = []
     for i in range(10):
         number_block.append(range(10))
-        
+
     return number_block
 
 
@@ -181,7 +180,14 @@ def loops_5():
         "There are {} green bottles".format(8)
     you'll come to see the pros and cons of each over time.
     """
+    number_square = []
+    for i in range(10):
+        coordinates_row = []
+        for j in range(5):
+            coordinates_row.append("(i" + str(i) + "," + "j" + str(j) + ")")
+        number_square.append(coordinates_row)
 
+    return number_square
 
 
 def loops_6():
