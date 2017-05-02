@@ -47,7 +47,6 @@ def really_shout(a_string):
     return a_string.upper()+"!"
 
 
-
 def minitest(f, args, expected):
     """Run a function with a list of args and print a response.
 

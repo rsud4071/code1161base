@@ -62,6 +62,7 @@ def star_map():
             return "!"
     return map(star_bang, range(10))
 
+
 def loops_1c(number_of_items=5, symbol="#"):
     """Respond to variables.
 
@@ -129,11 +130,6 @@ def loops_3():
         number_block.append(number_row)
 
     return number_block
-
-
-
-
-
 
 
 def loops_4():
@@ -255,6 +251,7 @@ def loops_7():
         star_pyramid.append(row)
 
     return star_pyramid
+
 
 def lp(some_kind_of_list, exercise_name):
     """Help to see what's going on.
