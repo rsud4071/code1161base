@@ -31,7 +31,7 @@ def exampleGuessingGame():
         elif guessedNumber < actualNumber:
             print("too small, try again ")
         else:
-            print("too big, try again   ")
+            print("too big, try again ")
     return "You got it!"
 
 
